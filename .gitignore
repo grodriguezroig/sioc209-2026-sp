@@ -211,3 +211,6 @@ pyrightconfig.json
 
 # Keras files
 *.keras
+
+# Claude
+CLAUDE.md
