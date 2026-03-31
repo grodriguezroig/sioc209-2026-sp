@@ -1,0 +1,68 @@
+# SIOC 209 – Deep Learning for Geo & Environmental Science
+# Conda environment for running all course notebooks.
+#
+# Create:   conda env create -f environment.yml
+# Activate: conda activate sioc209
+# Update:   conda env update -f environment.yml --prune
+#
+# Framework strategy (2026):
+#   • Keras 3 (multi-backend) for introductory / simpler examples
+#   • PyTorch for most hands-on work (matches PINNs, KANs, research ecosystem)
+#   • JAX may be added in a future iteration
+
+name: sioc209
+
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+
+dependencies:
+  # ── Python ──────────────────────────────────────────────
+  - python=3.10
+
+  # ── Core scientific stack ───────────────────────────────
+  - numpy
+  - pandas
+  - scipy
+  - xarray
+  - netcdf4
+
+  # ── Visualization ───────────────────────────────────────
+  - matplotlib
+  - cartopy
+
+  # ── Classical ML ────────────────────────────────────────
+  - scikit-learn
+
+  # ── Jupyter / notebook tooling ──────────────────────────
+  - jupyter
+  - notebook>=7
+  - jupyter-book
+  - ipywidgets
+
+  # ── Image I/O ───────────────────────────────────────────
+  - pillow
+  - imageio
+
+  # ── Deep learning (PyTorch — primary) ───────────────────
+  # PyTorch ≥2.6 required for Keras 3 Conv2D compatibility
+  - pytorch::pytorch>=2.6
+  - pytorch::torchvision
+
+  # ── pip-only packages ───────────────────────────────────
+  - pip
+  - pip:
+      # Keras 3 multi-backend (uses PyTorch backend by default in this env)
+      - keras>=3.0
+      # NLP / LLMs
+      - transformers
+      # Gaussian Processes
+      - gpflow
+      # Kolmogorov-Arnold Networks
+      - pykan
+      # ClimateBench utilities
+      - eofs
+      - esem
+      # Self-organising maps
+      - minisom

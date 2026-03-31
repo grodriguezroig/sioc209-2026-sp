@@ -1,9 +1,34 @@
+import os
 import numpy as np
 import pandas as pd
 import xarray as xr
 from eofs.xarray import Eof
-# data_path = './data/train_val/'
-data_path = "/Users/watson-parris/Library/CloudStorage/GoogleDrive-dwatsonparris@ucsd.edu/Shared drives/CAL Shared Data/ClimateBench/train_val_updated/"
+
+# Data path resolution order:
+#   1. CLIMATEBENCH_DATA_PATH environment variable (if set)
+#   2. ./data/train_val/  (local clone — works if you downloaded the data)
+#   3. Google-Drive path used on Colab (mount Drive first, see assignment notebook)
+#
+# On Google Colab, run this *before* importing utils:
+#   from google.colab import drive
+#   drive.mount('/content/drive')
+#   os.environ["CLIMATEBENCH_DATA_PATH"] = "/content/drive/Shareddrives/SOPC-209 Data/ClimateBench/train_val_updated/"
+
+_default_local = os.path.join(os.path.dirname(__file__), "data", "train_val")
+data_path = os.environ.get("CLIMATEBENCH_DATA_PATH", _default_local)
+
+# Ensure trailing separator so  data_path + f"inputs_{file}.nc"  works
+if not data_path.endswith(os.sep):
+    data_path += os.sep
+
+if not os.path.isdir(data_path):
+    import warnings
+    warnings.warn(
+        f"ClimateBench data directory not found at:\n  {data_path}\n"
+        "Set the CLIMATEBENCH_DATA_PATH environment variable or download the data into\n"
+        f"  {_default_local}\n"
+        "See the Google Drive link on Canvas for the dataset."
+    )
 
 min_co2 = 0.
 max_co2 = 9500
