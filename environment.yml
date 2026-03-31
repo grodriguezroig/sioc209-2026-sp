@@ -10,11 +10,10 @@
 #   • PyTorch for most hands-on work (matches PINNs, KANs, research ecosystem)
 #   • JAX may be added in a future iteration
 
-name: sioc209
+name: sioc209_test
 
 channels:
   - conda-forge
-  - pytorch
   - defaults
 
 dependencies:
@@ -45,14 +44,13 @@ dependencies:
   - pillow
   - imageio
 
-  # ── Deep learning (PyTorch — primary) ───────────────────
-  # PyTorch ≥2.6 required for Keras 3 Conv2D compatibility
-  - pytorch::pytorch>=2.6
-  - pytorch::torchvision
-
   # ── pip-only packages ───────────────────────────────────
   - pip
   - pip:
+      # Deep learning (PyTorch — primary)
+      # PyTorch ≥2.6 required for Keras 3 Conv2D compatibility
+      - torch>=2.6
+      - torchvision
       # Keras 3 multi-backend (uses PyTorch backend by default in this env)
       - keras>=3.0
       # NLP / LLMs
