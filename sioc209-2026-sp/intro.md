@@ -35,25 +35,25 @@ By the end of the course, students should be able to:
 
 | Week | Date | Lecture | Deadlines | Notes |
 |------|------|---------|-----------|-------|
-| 1 | Tue 31 Mar | [**Introduction**](01_intro/01_course_overview.ipynb)<br>*Course overview; what ML can do for environmental science; Python setup* | | |
-| | Thu 2 Apr | [**What is deep learning?**](01_intro/01_course_overview.ipynb)<br>*Neural network intuition; supervised vs. unsupervised; key terminology* | | |
-| 2 | Tue 7 Apr | [**Data collection and preparation**](01_intro/02_data_collection_and_prep.ipynb) · [**Regression: GPs and RFs**](02_regression/04_nonlinear_regression.ipynb)<br>*Pandas; handling missing data; train/test splits; decision trees; random forests* | | |
-| | Thu 9 Apr | [**Regression: GPs and RFs (continued)**](02_regression/04_nonlinear_regression.ipynb)<br>*Gaussian process posterior; kernel functions; uncertainty quantification* | | |
-| 3 | Tue 14 Apr | [**Feature engineering**](01_intro/03_feature_engineering.ipynb)<br>*xarray for multi-dimensional data; spatial and temporal features; convolutions* | | |
-| | Thu 16 Apr | [**Regression: ANNs**](02_regression/05_neural_networks.ipynb)<br>*Activation functions; gradient descent; backpropagation; MLP regression* | | 🎥 Remote |
-| 4 | Tue 21 Apr | [**Regression: Deep NNs**](02_regression/06_deep_neural_networks.ipynb)<br>*RNNs, LSTMs, Transformers; CNNs for spatial data* | | |
+| 1 | Tue 31 Mar | [**Introduction**](00_setup/01_introductory_slides.ipynb)<br>*Course overview; what ML can do for environmental science; Python setup* | | |
+| | Thu 2 Apr | [**What is deep learning?**](01_intro/02_course_overview.ipynb)<br>*Neural network intuition; supervised vs. unsupervised; key terminology* | | |
+| 2 | Tue 7 Apr | [**Data collection and preparation**](01_intro/03_data_collection_and_prep.ipynb)<br>*Pandas; handling missing data; train/test splits* | | |
+| | Thu 9 Apr | [**Feature engineering**](01_intro/04_feature_engineering.ipynb)<br>*xarray for multi-dimensional data; spatial and temporal features; convolutions* | | |
+| 3 | Tue 14 Apr | [**Regression: GPs and RFs**](02_regression/05_nonlinear_regression.ipynb)<br>*Decision trees; random forests; Gaussian process posterior; kernel functions; uncertainty quantification* | | |
+| | Thu 16 Apr | [**Regression: ANNs**](02_regression/06_neural_networks.ipynb)<br>*Activation functions; gradient descent; backpropagation; MLP regression* | | 🎥 Remote |
+| 4 | Tue 21 Apr | [**Regression: Deep NNs**](02_regression/07_deep_neural_networks.ipynb)<br>*RNNs, LSTMs, Transformers; CNNs for spatial data* | | |
 | | Thu 23 Apr | [**ClimateBench**](applications/ClimateBench/assignment_1.ipynb)<br>*Climate model emulation; applying regression models to real-world emissions data* | Assignment 1 set | |
-| 5 | Tue 28 Apr | [**Classification**](03_classification/07_cnn_classification.ipynb)<br>*CNNs for images; softmax and cross-entropy; confusion matrices; transfer learning* | | 🎥 Remote |
+| 5 | Tue 28 Apr | [**Classification**](03_classification/08_cnn_classification.ipynb)<br>*CNNs for images; softmax and cross-entropy; confusion matrices; transfer learning* | | 🎥 Remote |
 | | Thu 30 Apr | [**Ship classification from Kelvin wakes**](applications/ShipWake/ship_classification.ipynb)<br>*Inverse problem framing; LeNet-5 and ResNet-18; regression from simulated wave fields* | Assignment 1 due<br>Assignment 2 set | |
-| 6 | Tue 5 May | [**Object detection and segmentation**](04_detection/08_object_detection.ipynb)<br>*YOLO, Faster R-CNN; U-Net; bounding boxes; IoU; semantic segmentation* | | |
+| 6 | Tue 5 May | [**Object detection and segmentation**](04_detection/09_object_detection.ipynb)<br>*YOLO, Faster R-CNN; U-Net; bounding boxes; IoU; semantic segmentation* | | |
 | | Thu 7 May | **Acoustic detection**<br>*Detecting marine mammals from hydrophone recordings; spectrograms and CNNs* | Assignment 2 due Mon 11 May | 👥 Michaela (TBD) |
 | 7 | Tue 12 May | **Physics-informed neural networks**<br>*Encoding physical constraints in the loss function; solving PDEs with neural networks* | | 👥 Peter Gerstoft (TBD) |
-| | Thu 14 May | [**PINN example / KANs**](05_physical/09_KAN.ipynb)<br>*Worked PINN examples; Kolmogorov-Arnold Networks; interpretable function fitting* | Assignment 3 set | |
-| 8 | Tue 19 May | [**Clustering**](06_unsupervised_learning/10_clustering.ipynb)<br>*K-means; hierarchical clustering; self-organizing maps; elbow method; silhouette scores* | | |
-| | Thu 21 May | [**Dimensionality reduction: AE, Tile2Vec**](06_unsupervised_learning/11_dimensionality_reduction.ipynb)<br>*PCA; t-SNE; autoencoders; contrastive learning for spatial embeddings* | Assignment 3 due | |
-| 9 | Tue 26 May | [**Learning satellite images**](06_unsupervised_learning/12_contrastive_learning_example.ipynb)<br>*SimCLR; Tile2Vec; unsupervised cloud morphology classification* | Project set | |
-| | Thu 28 May | [**Generative models: GANs, VAEs**](07_generative_models/13_generative_models.ipynb)<br>*VAE latent spaces; adversarial training; diffusion models; climate applications* | | |
-| 10 | Tue 2 Jun | [**Large language models**](07_generative_models/14_llms.ipynb)<br>*Transformer architecture; pre-training and fine-tuning; tool use; scientific applications* | | |
+| | Thu 14 May | [**PINN example / KANs**](05_physical/10_KAN.ipynb)<br>*Worked PINN examples; Kolmogorov-Arnold Networks; interpretable function fitting* | Assignment 3 set | |
+| 8 | Tue 19 May | [**Clustering**](06_unsupervised_learning/11_clustering.ipynb)<br>*K-means; hierarchical clustering; self-organizing maps; elbow method; silhouette scores* | | |
+| | Thu 21 May | [**Dimensionality reduction: AE, Tile2Vec**](06_unsupervised_learning/12_dimensionality_reduction.ipynb)<br>*PCA; t-SNE; autoencoders; contrastive learning for spatial embeddings* | Assignment 3 due | |
+| 9 | Tue 26 May | [**Learning satellite images**](06_unsupervised_learning/13_contrastive_learning_example.ipynb)<br>*SimCLR; Tile2Vec; unsupervised cloud morphology classification* | Project set | |
+| | Thu 28 May | [**Generative models: GANs, VAEs**](07_generative_models/14_generative_models.ipynb)<br>*VAE latent spaces; adversarial training; diffusion models; climate applications* | | |
+| 10 | Tue 2 Jun | [**Large language models**](07_generative_models/15_llms.ipynb)<br>*Transformer architecture; pre-training and fine-tuning; tool use; scientific applications* | | |
 | | Thu 4 Jun | [**Project presentations**](08_project/project.ipynb) | Project due Fri 5 Jun | |
 
 *This schedule is subject to change as the course progresses.*
